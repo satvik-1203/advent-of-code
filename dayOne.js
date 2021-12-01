@@ -10,9 +10,8 @@ const slidingWindowFn = (newData, dataArr) => {
 
   while (rightPointer < dataArr.length) {
     let sum = 0;
-    for (let i = leftPointer; i < rightPointer; i++) {
-      sum += +dataArr[i];
-    }
+    for (let i = leftPointer; i < rightPointer; i++) sum += +dataArr[i];
+
     newData.push(sum);
     leftPointer++;
     rightPointer++;
@@ -21,9 +20,9 @@ const slidingWindowFn = (newData, dataArr) => {
 
 const fn = (dataArr) => {
   let larger = 0;
-  for (let i = 1; i < dataArr.length; i++) {
+  for (let i = 1; i < dataArr.length; i++)
     if (+dataArr[i] > +dataArr[i - 1]) larger++;
-  }
+
   return larger;
 };
 
